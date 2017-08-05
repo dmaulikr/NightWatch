@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NightWatch_Example' do
+  pod 'NightWatch', :path => '../'
+
+  target 'NightWatch_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,16 @@
+PODS:
+  - NightWatch (0.1.0)
+
+DEPENDENCIES:
+  - NightWatch (from `../`)
+
+EXTERNAL SOURCES:
+  NightWatch:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NightWatch: d3cccac6be556e9362a087c3f272c993374d499a
+
+PODFILE CHECKSUM: 4583dbdbdbf40b4524ad3e6bff9f02c6d48c4769
+
+COCOAPODS: 1.2.1
