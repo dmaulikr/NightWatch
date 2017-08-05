@@ -20,17 +20,14 @@ extension WebService {
                 return
             }
 
-            guard let dic = data?.dic , let ret = dic["retVal"] as? [String:Any] else {
+            guard let dic = data?.dic , let points = dic["gps_point"] as? [[String: Any]] else {
                 handle(nil)
                 return
             }
 
-            var arrDic : [[String:Any]] = []
-
-            ret.forEach{ arrDic.append($0.value as! [String : Any]) }
-
-            handle(arrDic)
+            handle(points)
             return
+            
         }
     }
 

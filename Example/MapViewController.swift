@@ -90,21 +90,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let location = CLLocationCoordinate2D(latitude: s.coordinate.latitude, longitude: s.coordinate.longitude)
             let pointAnnotation = StationAnnotation()
             pointAnnotation.coordinate = location
-            if s.fullPercent == 0 {
-                pointAnnotation.pinCustomImageName = "pin01"
-            } else if s.fullPercent <= 0.2 {
-                pointAnnotation.pinCustomImageName = "pin02"
-            } else if s.fullPercent <= 0.5 {
-                pointAnnotation.pinCustomImageName = "pin03"
-            } else if s.fullPercent <= 0.8 {
-                pointAnnotation.pinCustomImageName = "pin04"
-            } else if s.fullPercent <= 1 {
-                pointAnnotation.pinCustomImageName = "pin05"
-            } else if s.fullPercent == 1 {
-                pointAnnotation.pinCustomImageName = "pin06"
-            } else {
-                pointAnnotation.pinCustomImageName = "pin01"
-            }
+            
+            pointAnnotation.pinCustomImageName = "Pin"
+
             
             pointAnnotation.station = s
             stationsMapView.addAnnotation(pointAnnotation)
