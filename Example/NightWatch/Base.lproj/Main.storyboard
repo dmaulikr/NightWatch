@@ -39,22 +39,37 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gAy-5d-Pv1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvg-md-8fH">
+                                <rect key="frame" x="40" y="597" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X19-d4-pEz">
+                                <rect key="frame" x="289" y="597" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Tvg-md-8fH" secondAttribute="bottom" constant="40" id="AmD-52-fAB"/>
                             <constraint firstAttribute="trailing" secondItem="gAy-5d-Pv1" secondAttribute="trailing" id="Cxr-vb-1ab"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="X19-d4-pEz" secondAttribute="bottom" constant="40" id="D1i-bs-0oD"/>
+                            <constraint firstItem="Tvg-md-8fH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="40" id="JEw-oK-Yaa"/>
                             <constraint firstItem="gAy-5d-Pv1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Ldj-oO-7uN"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gAy-5d-Pv1" secondAttribute="bottom" id="dqp-z8-ZYu"/>
                             <constraint firstItem="gAy-5d-Pv1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="eam-AA-oCM"/>
+                            <constraint firstAttribute="trailing" secondItem="X19-d4-pEz" secondAttribute="trailing" constant="40" id="pPC-A0-t3s"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NightWatch" id="uSh-eM-J86"/>
                     <connections>
+                        <outlet property="callHelpButton" destination="X19-d4-pEz" id="72Q-vp-hwQ"/>
+                        <outlet property="makeNoiseButton" destination="Tvg-md-8fH" id="pVZ-5K-UQL"/>
                         <outlet property="stationsMapView" destination="gAy-5d-Pv1" id="Kv7-vC-cyK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="42" y="-129"/>
         </scene>
     </scenes>
 </document>

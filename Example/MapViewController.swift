@@ -19,7 +19,8 @@ class StationAnnotation: MKPointAnnotation {
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var stationsMapView: MKMapView!
-    
+    @IBOutlet weak var makeNoiseButton: UIButton!
+    @IBOutlet weak var callHelpButton: UIButton!
     //pass from appdelegate
     var stations: [StationModel]!
     
