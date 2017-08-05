@@ -39,16 +39,23 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gAy-5d-Pv1">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvg-md-8fH">
-                                <rect key="frame" x="40" y="597" width="39" height="30"/>
-                                <state key="normal" title="Noise"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvg-md-8fH">
+                                <rect key="frame" x="13" y="573" width="168" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="FMv-N0-8Xt"/>
+                                </constraints>
+                                <state key="normal" title="Noise" image="Noise"/>
                                 <connections>
                                     <action selector="playSound:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0Je-fo-fnq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X19-d4-pEz">
-                                <rect key="frame" x="305" y="597" width="30" height="30"/>
-                                <state key="normal" title="Sos"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X19-d4-pEz">
+                                <rect key="frame" x="194" y="573" width="168" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="A7Z-jL-LJL"/>
+                                    <constraint firstAttribute="width" constant="168" id="NxV-BS-iPn"/>
+                                </constraints>
+                                <state key="normal" title="Sos" image="Sos"/>
                                 <connections>
                                     <action selector="sos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XXw-gu-kp3"/>
                                 </connections>
@@ -56,14 +63,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Tvg-md-8fH" secondAttribute="bottom" constant="40" id="AmD-52-fAB"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Tvg-md-8fH" secondAttribute="bottom" constant="26" id="AmD-52-fAB"/>
                             <constraint firstAttribute="trailing" secondItem="gAy-5d-Pv1" secondAttribute="trailing" id="Cxr-vb-1ab"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="X19-d4-pEz" secondAttribute="bottom" constant="40" id="D1i-bs-0oD"/>
-                            <constraint firstItem="Tvg-md-8fH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="40" id="JEw-oK-Yaa"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="X19-d4-pEz" secondAttribute="bottom" constant="26" id="D1i-bs-0oD"/>
+                            <constraint firstItem="Tvg-md-8fH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="13" id="JEw-oK-Yaa"/>
                             <constraint firstItem="gAy-5d-Pv1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Ldj-oO-7uN"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gAy-5d-Pv1" secondAttribute="bottom" id="dqp-z8-ZYu"/>
                             <constraint firstItem="gAy-5d-Pv1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="eam-AA-oCM"/>
-                            <constraint firstAttribute="trailing" secondItem="X19-d4-pEz" secondAttribute="trailing" constant="40" id="pPC-A0-t3s"/>
+                            <constraint firstAttribute="trailing" secondItem="X19-d4-pEz" secondAttribute="trailing" constant="13" id="pPC-A0-t3s"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NightWatch" id="uSh-eM-J86"/>
@@ -78,4 +85,8 @@
             <point key="canvasLocation" x="42" y="-129"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Noise" width="180" height="68"/>
+        <image name="Sos" width="180" height="68"/>
+    </resources>
 </document>
