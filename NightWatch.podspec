@@ -41,4 +41,6 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   s.frameworks = 'MapKit'
   s.dependency 'TwilioVideo'
+  s.dependency 'Firebase/Core'
+  s.dependency 'Firebase/Database'
 end

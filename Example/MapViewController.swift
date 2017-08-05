@@ -54,7 +54,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         stationsMapView.delegate = self
         stationsMapView.mapType = MKMapType.standard
         stationsMapView.showsUserLocation = true
-        
+
         
         StationManager.sharedInstance.getStations { result in
             switch result {
@@ -145,6 +145,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             return
         }
         self.currentLocation = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        
+        let app = UIApplication.shared.delegate as! AppDelegate
+        // update current user location to FB
+        app.user?.updateChildValues(["loc": [
+                                         "lat": self.currentLocation.latitude,
+                                         "lng": self.currentLocation.longitude
+                                    ]
+        ])
+
+
         if firstEnter {
             self.firstEnter = false
             let region = MKCoordinateRegionMake(self.currentLocation, MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))

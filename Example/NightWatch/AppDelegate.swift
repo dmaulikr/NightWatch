@@ -7,18 +7,31 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var ref: DatabaseReference?
 
+    var user: DatabaseReference?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //        UIApplication.shared.statusBarStyle = .lightContent
         //        UINavigationBar.appearance().clipsToBounds = true
         //        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
         //        statusBar.backgroundColor = UIColor.mainBlue
+        
+        FirebaseApp.configure()
+        ref = Database.database().reference()
+
+        let uid : String = "-KqmeIZkbttnqaxYiI9F";
+        user = ref?.child("location").child(uid)
+
+        /*updateChildValues*/
+        user?.updateChildValues(["name": "Alice Chuang"])
         
         return true
     }
