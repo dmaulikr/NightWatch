@@ -77,7 +77,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     @IBAction func playSound(_ sender: AnyObject) {
-        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+        let filename = "scream"
+        let ext = "mp3"
+        
+        if let soundUrl = Bundle.main.url(forResource: filename, withExtension: ext) {
+            var soundId: SystemSoundID = 0
+            
+            AudioServicesCreateSystemSoundID(soundUrl as CFURL, &soundId)
+            
+            AudioServicesAddSystemSoundCompletion(soundId, nil, nil, { (soundId, clientData) -> Void in
+                AudioServicesDisposeSystemSoundID(soundId)
+            }, nil)
+            
+            AudioServicesPlaySystemSound(soundId)
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+        }
+        
+        
     }
 
     @IBAction func sos(_ sender: AnyObject) {

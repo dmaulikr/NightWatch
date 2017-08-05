@@ -21,6 +21,7 @@
 		F978C99A1F35CA7900CBC95A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F978C9971F35CA7900CBC95A /* WebService.swift */; };
 		F978C99D1F35CAFF00CBC95A /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F978C99C1F35CAFF00CBC95A /* Tools.swift */; };
 		F978C99F1F35F95F00CBC95A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F978C99E1F35F95F00CBC95A /* GoogleService-Info.plist */; };
+		F978C9A31F365E4B00CBC95A /* scream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F978C9A21F365E4B00CBC95A /* scream.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		F978C9971F35CA7900CBC95A /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		F978C99C1F35CAFF00CBC95A /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		F978C99E1F35F95F00CBC95A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F978C9A21F365E4B00CBC95A /* scream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scream.mp3; sourceTree = "<group>"; };
 		FA69F846DC1ED23C53969458 /* Pods_NightWatch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NightWatch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 		607FACD21AFB9204008FA782 /* Example for NightWatch */ = {
 			isa = PBXGroup;
 			children = (
+				F978C9A21F365E4B00CBC95A /* scream.mp3 */,
 				F978C99B1F35CA7C00CBC95A /* WebService */,
 				F978C95E1F35C26600CBC95A /* MapViewController.swift */,
 				F978C9601F35C36500CBC95A /* StationModel.swift */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				F978C9A31F365E4B00CBC95A /* scream.mp3 in Resources */,
 				F978C99F1F35F95F00CBC95A /* GoogleService-Info.plist in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
