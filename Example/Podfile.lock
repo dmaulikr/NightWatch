@@ -27,7 +27,11 @@ PODS:
   - NightWatch (0.1.0):
     - Firebase/Core
     - Firebase/Database
+    - NVActivityIndicatorView
     - TwilioVideo
+  - NVActivityIndicatorView (3.7.0):
+    - NVActivityIndicatorView/Presenter (= 3.7.0)
+  - NVActivityIndicatorView/Presenter (3.7.0)
   - TwilioVideo (1.2.1)
 
 DEPENDENCIES:
@@ -45,7 +49,8 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  NightWatch: e1f79a1b5d11f60704cb143b19c9d1b22966a469
+  NightWatch: a835d7905f075f9fc7f34fda3d07f3bfd8423ddb
+  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
   TwilioVideo: 4b731c94eaebafcbe3c90cde821ec2d47ca7f4c4
 
 PODFILE CHECKSUM: e89773e5f948c125c091b6e6ded09504819d80da

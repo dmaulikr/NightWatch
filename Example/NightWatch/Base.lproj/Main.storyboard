@@ -75,17 +75,97 @@
                     </view>
                     <navigationItem key="navigationItem" title="NightWatch" id="uSh-eM-J86"/>
                     <connections>
+                        <outlet property="activityView" destination="B3w-c8-UAs" id="eqL-QY-3bG"/>
                         <outlet property="callHelpButton" destination="X19-d4-pEz" id="72Q-vp-hwQ"/>
                         <outlet property="makeNoiseButton" destination="Tvg-md-8fH" id="pVZ-5K-UQL"/>
+                        <outlet property="sosView" destination="AGX-3Q-DNY" id="8k9-46-J0T"/>
                         <outlet property="stationsMapView" destination="gAy-5d-Pv1" id="Kv7-vC-cyK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <view opaque="NO" contentMode="scaleToFill" id="AGX-3Q-DNY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSC-Mf-Faq">
+                            <rect key="frame" x="56" y="584" width="262" height="57"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="262" id="M7c-dt-FJS"/>
+                                <constraint firstAttribute="height" constant="57" id="QBs-dU-MDd"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cencelReport:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7RP-jt-VKK"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3w-c8-UAs" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                            <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="0c2-Ut-vOf"/>
+                                <constraint firstAttribute="width" constant="60" id="5eb-1R-gNw"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                    <color key="value" red="0.71764705880000002" green="0.24313725489999999" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballPulse"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gjf-jP-W2U">
+                            <rect key="frame" x="101" y="233" width="173.5" height="20.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Anr-pL-WiA">
+                                    <rect key="frame" x="0.0" y="0.0" width="173.5" height="20.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kwN-cm-mBG">
+                                            <rect key="frame" x="0.0" y="0.0" width="173.5" height="20.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NFo-IC-eG8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="173.5" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已發出求救訊息撥號中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLG-PZ-6KZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="173.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="B3w-c8-UAs" firstAttribute="top" secondItem="gjf-jP-W2U" secondAttribute="bottom" constant="50" id="P6h-aL-gpV"/>
+                        <constraint firstItem="B3w-c8-UAs" firstAttribute="centerY" secondItem="AGX-3Q-DNY" secondAttribute="centerY" id="QlS-Wm-ex1"/>
+                        <constraint firstItem="wSC-Mf-Faq" firstAttribute="centerX" secondItem="AGX-3Q-DNY" secondAttribute="centerX" id="SU5-gQ-NlQ"/>
+                        <constraint firstItem="gjf-jP-W2U" firstAttribute="centerX" secondItem="AGX-3Q-DNY" secondAttribute="centerX" id="aRg-bm-fPB"/>
+                        <constraint firstAttribute="bottom" secondItem="wSC-Mf-Faq" secondAttribute="bottom" constant="26" id="oBJ-rh-1Ct"/>
+                        <constraint firstItem="B3w-c8-UAs" firstAttribute="centerX" secondItem="AGX-3Q-DNY" secondAttribute="centerX" id="xPY-Fb-Hsc"/>
+                    </constraints>
+                </view>
             </objects>
-            <point key="canvasLocation" x="42" y="-129"/>
+            <point key="canvasLocation" x="273" y="-129"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Cancel" width="262" height="57"/>
         <image name="Noise" width="180" height="68"/>
         <image name="Sos" width="180" height="68"/>
     </resources>

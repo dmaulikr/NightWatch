@@ -43,4 +43,5 @@ TODO: Add long description of the pod here.
   s.dependency 'TwilioVideo'
   s.dependency 'Firebase/Core'
   s.dependency 'Firebase/Database'
+  s.dependency 'NVActivityIndicatorView'
 end

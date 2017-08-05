@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import AudioToolbox.AudioServices
+import NVActivityIndicatorView
 
 
 class StationAnnotation: MKPointAnnotation {
@@ -23,6 +24,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet weak var stationsMapView: MKMapView!
     @IBOutlet weak var makeNoiseButton: UIButton!
     @IBOutlet weak var callHelpButton: UIButton!
+    @IBOutlet weak var sosView: UIView!
+    @IBOutlet var activityView: NVActivityIndicatorView!
+    
     //pass from appdelegate
     var stations: [StationModel]!
     
@@ -54,7 +58,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         stationsMapView.mapType = MKMapType.standard
         stationsMapView.showsUserLocation = true
 
-        
         StationManager.sharedInstance.getStations { result in
             switch result {
             case .success:
@@ -82,6 +85,21 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let app = UIApplication.shared.delegate as! AppDelegate
         // update current user location to FB
         app.user?.updateChildValues(["sos": true])
+        
+        
+        self.activityView.stopAnimating()
+        self.view.addSubview(self.sosView)
+        self.sosView.frame.origin.y = self.view.bounds.size.height
+        
+        UIView.animate(withDuration: 0.3,
+                       delay: 0.0,
+                       options: UIViewAnimationOptions.curveEaseOut,
+                       animations: { () -> Void in
+                        self.sosView.frame.origin.y = 0
+                        self.view?.layoutIfNeeded()
+        }, completion: { (finished) -> Void in
+            self.activityView.startAnimating()
+        })
     }
     
     fileprivate func makeAnnotations() {
@@ -99,6 +117,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             ano.append(pointAnnotation)
         }
         self.annotations = ano
+    }
+    
+   
+    @IBAction func cencelReport(_ sender:AnyObject) {
+        self.sosView.removeFromSuperview()
     }
     
     //    MARK: - Custom Annotation
