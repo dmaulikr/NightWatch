@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import CoreLocation
+import AudioToolbox.AudioServices
+
 
 class StationAnnotation: MKPointAnnotation {
     var pinCustomImageName: String!
@@ -36,12 +38,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         stationsMapView.setRegion(region, animated: true)
     }
     
-    
     public func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +71,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    @IBAction func playSound(_ sender: AnyObject) {
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+    }
+
+    @IBAction func sos(_ sender: AnyObject) {
+        // send an alert to backend
+        let app = UIApplication.shared.delegate as! AppDelegate
+        // update current user location to FB
+        app.user?.updateChildValues(["sos": true])
     }
     
     fileprivate func makeAnnotations() {
