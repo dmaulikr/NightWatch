@@ -30,8 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let uid : String = "-KqmeIZkbttnqaxYiI9F";
         user = ref?.child("location").child(uid)
 
-        /*updateChildValues*/
-        user?.updateChildValues(["name": "Alice Chuang"])
+        user?.setValue(["name": "Alice Chuang",
+                         "gender": 0,
+                         "loc": ["lat": 25.06080, "lng": 121.5340501],
+                         "phone": "0976873541",
+                         "photo": "./logo.png",
+                         "sos":false])
         
         return true
     }
