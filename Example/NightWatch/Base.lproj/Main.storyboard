@@ -78,6 +78,7 @@
                         <outlet property="activityView" destination="B3w-c8-UAs" id="eqL-QY-3bG"/>
                         <outlet property="callHelpButton" destination="X19-d4-pEz" id="72Q-vp-hwQ"/>
                         <outlet property="makeNoiseButton" destination="Tvg-md-8fH" id="pVZ-5K-UQL"/>
+                        <outlet property="remoteView" destination="39q-fT-Hjr" id="SQ0-QT-fyA"/>
                         <outlet property="sosView" destination="AGX-3Q-DNY" id="8k9-46-J0T"/>
                         <outlet property="stationsMapView" destination="gAy-5d-Pv1" id="Kv7-vC-cyK"/>
                     </connections>
@@ -149,15 +150,25 @@
                                 </stackView>
                             </subviews>
                         </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39q-fT-Hjr" customClass="TVIVideoView">
+                            <rect key="frame" x="56" y="120" width="262" height="262"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="262" id="RJw-M6-Vz6"/>
+                                <constraint firstAttribute="height" constant="262" id="TOA-ZI-CZe"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="39q-fT-Hjr" firstAttribute="top" secondItem="AGX-3Q-DNY" secondAttribute="top" constant="120" id="LMi-EX-DKN"/>
                         <constraint firstItem="B3w-c8-UAs" firstAttribute="top" secondItem="gjf-jP-W2U" secondAttribute="bottom" constant="50" id="P6h-aL-gpV"/>
                         <constraint firstItem="B3w-c8-UAs" firstAttribute="centerY" secondItem="AGX-3Q-DNY" secondAttribute="centerY" id="QlS-Wm-ex1"/>
                         <constraint firstItem="wSC-Mf-Faq" firstAttribute="centerX" secondItem="AGX-3Q-DNY" secondAttribute="centerX" id="SU5-gQ-NlQ"/>
                         <constraint firstItem="gjf-jP-W2U" firstAttribute="centerX" secondItem="AGX-3Q-DNY" secondAttribute="centerX" id="aRg-bm-fPB"/>
                         <constraint firstAttribute="bottom" secondItem="wSC-Mf-Faq" secondAttribute="bottom" constant="26" id="oBJ-rh-1Ct"/>
                         <constraint firstItem="B3w-c8-UAs" firstAttribute="centerX" secondItem="AGX-3Q-DNY" secondAttribute="centerX" id="xPY-Fb-Hsc"/>
+                        <constraint firstItem="39q-fT-Hjr" firstAttribute="centerX" secondItem="AGX-3Q-DNY" secondAttribute="centerX" id="yv8-vX-4tg"/>
                     </constraints>
                 </view>
             </objects>
