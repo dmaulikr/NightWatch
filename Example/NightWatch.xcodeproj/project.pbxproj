@@ -22,6 +22,7 @@
 		F978C99D1F35CAFF00CBC95A /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F978C99C1F35CAFF00CBC95A /* Tools.swift */; };
 		F978C99F1F35F95F00CBC95A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F978C99E1F35F95F00CBC95A /* GoogleService-Info.plist */; };
 		F978C9A31F365E4B00CBC95A /* scream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F978C9A21F365E4B00CBC95A /* scream.mp3 */; };
+		F978C9A51F36600900CBC95A /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F978C9A41F36600900CBC95A /* Geotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		F978C99C1F35CAFF00CBC95A /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		F978C99E1F35F95F00CBC95A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F978C9A21F365E4B00CBC95A /* scream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scream.mp3; sourceTree = "<group>"; };
+		F978C9A41F36600900CBC95A /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
 		FA69F846DC1ED23C53969458 /* Pods_NightWatch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NightWatch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				F978C9A21F365E4B00CBC95A /* scream.mp3 */,
 				F978C99B1F35CA7C00CBC95A /* WebService */,
 				F978C95E1F35C26600CBC95A /* MapViewController.swift */,
+				F978C9A41F36600900CBC95A /* Geotification.swift */,
 				F978C9601F35C36500CBC95A /* StationModel.swift */,
 				F978C9621F35CA0B00CBC95A /* StationManager.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -301,6 +304,7 @@
 				F978C9631F35CA0B00CBC95A /* StationManager.swift in Sources */,
 				F978C9991F35CA7900CBC95A /* JsonExtension.swift in Sources */,
 				F978C99A1F35CA7900CBC95A /* WebService.swift in Sources */,
+				F978C9A51F36600900CBC95A /* Geotification.swift in Sources */,
 				F978C9611F35C36500CBC95A /* StationModel.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				F978C95F1F35C26600CBC95A /* MapViewController.swift in Sources */,
