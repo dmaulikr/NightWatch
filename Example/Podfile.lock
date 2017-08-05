@@ -1,5 +1,7 @@
 PODS:
-  - NightWatch (0.1.0)
+  - NightWatch (0.1.0):
+    - TwilioVideo
+  - TwilioVideo (1.2.1)
 
 DEPENDENCIES:
   - NightWatch (from `../`)
@@ -9,7 +11,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NightWatch: d3cccac6be556e9362a087c3f272c993374d499a
+  NightWatch: d471f0af81214a3bad45eeacdecd9b907e77cac2
+  TwilioVideo: 4b731c94eaebafcbe3c90cde821ec2d47ca7f4c4
 
 PODFILE CHECKSUM: 4583dbdbdbf40b4524ad3e6bff9f02c6d48c4769
 

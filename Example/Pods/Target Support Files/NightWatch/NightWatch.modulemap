@@ -1,6 +1,0 @@
-framework module NightWatch {
-  umbrella header "NightWatch-umbrella.h"
-
-  export *
-  module * { export * }
-}
