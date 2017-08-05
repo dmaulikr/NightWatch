@@ -40,12 +40,18 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvg-md-8fH">
-                                <rect key="frame" x="40" y="597" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="40" y="597" width="39" height="30"/>
+                                <state key="normal" title="Noise"/>
+                                <connections>
+                                    <action selector="playSound:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0Je-fo-fnq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X19-d4-pEz">
-                                <rect key="frame" x="289" y="597" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="305" y="597" width="30" height="30"/>
+                                <state key="normal" title="Sos"/>
+                                <connections>
+                                    <action selector="sos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XXw-gu-kp3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
